@@ -2,7 +2,7 @@
 
 Personal portfolio site built with Three.js, deployed as a static site on Vercel.
 
-**Live:** https://portifolio-five-kappa-45.vercel.app
+**Live:** https://bruno-bacelar.vercel.app/
 
 ## Structure
 
