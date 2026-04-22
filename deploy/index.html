@@ -248,6 +248,20 @@
         ].join('\n');
         doc.head.appendChild(navFixStyle);
 
+        // Close the mobile menu after selecting a nav link.
+        const closeMenuCode = "var n=document.getElementById('navLinks');if(n)n.classList.remove('open')";
+        const navAnchors = doc.querySelectorAll('.nav-links a');
+        navAnchors.forEach((link) => {
+          const existing = link.getAttribute('onclick');
+          if (!existing) {
+            link.setAttribute('onclick', closeMenuCode);
+            return;
+          }
+          if (!existing.includes("navLinks") || !existing.includes("classList.remove('open')")) {
+            link.setAttribute('onclick', existing + '; ' + closeMenuCode);
+          }
+        });
+
         document.documentElement.replaceWith(doc.documentElement);
         const dead = Array.from(document.scripts);
         for (const old of dead) {
