@@ -222,6 +222,26 @@
           heroCta.appendChild(downloadResume);
         }
 
+        // Force fully-collapsed mobile nav state so no menu edge remains visible.
+        const navFixStyle = doc.createElement('style');
+        navFixStyle.textContent = [
+          '@media (max-width: 768px) {',
+          '  .nav-links {',
+          '    opacity: 0 !important;',
+          '    visibility: hidden !important;',
+          '    pointer-events: none !important;',
+          '    transform: translateY(-12px) !important;',
+          '  }',
+          '  .nav-links.open {',
+          '    opacity: 1 !important;',
+          '    visibility: visible !important;',
+          '    pointer-events: auto !important;',
+          '    transform: translateY(0) !important;',
+          '  }',
+          '}'
+        ].join('\n');
+        doc.head.appendChild(navFixStyle);
+
         document.documentElement.replaceWith(doc.documentElement);
         const dead = Array.from(document.scripts);
         for (const old of dead) {
