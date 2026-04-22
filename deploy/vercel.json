@@ -1,5 +1,14 @@
 {
-  "buildCommand": "",
-  "installCommand": "",
-  "framework": null
+  "version": 2,
+  "builds": [],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
 }
