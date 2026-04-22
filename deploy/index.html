@@ -198,6 +198,30 @@
         // createElement so they execute, awaiting onload for src scripts to
         // preserve ordering (React before ReactDOM before Babel before text/babel).
         const doc = new DOMParser().parseFromString(template, 'text/html');
+
+        // Inject resume actions directly into the unpacked DOM so they remain
+        // part of the final rendered page after document replacement.
+        const resumeHref = './Bruno%20Bacelar%20-%20Resume.pdf';
+        const heroCta = doc.querySelector('.cta-row');
+        if (heroCta && !heroCta.querySelector('[data-resume-btn="view"]')) {
+          const viewResume = doc.createElement('a');
+          viewResume.href = resumeHref;
+          viewResume.target = '_blank';
+          viewResume.rel = 'noopener';
+          viewResume.className = 'btn btn-outline';
+          viewResume.dataset.resumeBtn = 'view';
+          viewResume.textContent = 'View Resume';
+          heroCta.appendChild(viewResume);
+
+          const downloadResume = doc.createElement('a');
+          downloadResume.href = resumeHref;
+          downloadResume.className = 'btn btn-filled';
+          downloadResume.dataset.resumeBtn = 'download';
+          downloadResume.setAttribute('download', 'Bruno Bacelar - Resume.pdf');
+          downloadResume.textContent = 'Download Resume';
+          heroCta.appendChild(downloadResume);
+        }
+
         document.documentElement.replaceWith(doc.documentElement);
         const dead = Array.from(document.scripts);
         for (const old of dead) {
