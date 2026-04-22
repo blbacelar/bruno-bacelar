@@ -7,12 +7,11 @@ Personal portfolio site built with Three.js, deployed as a static site on Vercel
 ## Structure
 
 ```
-Bruno Bacelar Portfolio _standalone_.html   ← source file
-profile.jpg                                 ← portrait image
 deploy/
-  index.html        ← served by Vercel (copy of standalone)
-  profile.jpg
-  vercel.json       ← static site config
+  public/
+    index.html        ← served by Vercel
+    profile.jpg
+  vercel.json         ← static site config
 ```
 
 ## Deploying
