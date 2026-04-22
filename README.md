@@ -8,10 +8,9 @@ Personal portfolio site built with Three.js, deployed as a static site on Vercel
 
 ```
 deploy/
-  public/
-    index.html        ← served by Vercel
-    profile.jpg
-  vercel.json         ← static site config
+  index.html        ← served by Vercel
+  profile.jpg
+  vercel.json       ← minimal static config
 ```
 
 ## Deploying
