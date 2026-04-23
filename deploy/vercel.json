@@ -3,6 +3,10 @@
   "builds": [],
   "routes": [
     {
+      "src": "/favicon\\.ico",
+      "dest": "/favicon.svg"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     },
