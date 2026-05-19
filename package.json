@@ -1,0 +1,12 @@
+{
+  "name": "bruno-bacelar",
+  "version": "1.0.0",
+  "description": "Portfolio prompt generator for Bruno Bacelar",
+  "type": "module",
+  "scripts": {
+    "prompt-gen": "node prompt-gen.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0"
+  }
+}
