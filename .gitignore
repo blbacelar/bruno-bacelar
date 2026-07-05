@@ -1,3 +1,5 @@
 .DS_Store
 .vite/
 deploy/.vercel/
+node_modules
+

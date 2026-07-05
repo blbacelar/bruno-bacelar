@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ————— Design tokens: "Diagnostic" identity —————
+   Dark ink base with SEMANTIC status colors borrowed from
+   test reports: pass green, fail red, flaky amber, trace blue.
+   Color is never decoration here. It always means a status. */
+@theme {
+  --color-ink: #0a0d13;
+  --color-surface: #10141d;
+  --color-raise: #151b27;
+  --color-line: #202839;
+  --color-text: #e9ecf4;
+  --color-muted: #8b93a7;
+  --color-faint: #5b6273;
+  --color-pass: #34d399;
+  --color-fail: #f87171;
+  --color-flaky: #fbbf24;
+  --color-trace: #8ab4ff;
+
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --ease-signature: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-pass);
+  color: var(--color-ink);
+}
+
+/* Faint diagnostic grid, like a trace viewer timeline */
+.trace-grid {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-line) 45%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 96px 100%;
+}
+
+/* Blinking terminal caret */
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret {
+  animation: caret-blink 1.1s step-end infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .caret, .pulse-soft { animation: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-trace);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
