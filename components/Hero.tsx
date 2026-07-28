@@ -28,9 +28,9 @@ export default function Hero() {
             transition={{ duration: 0.64, delay: 0.1, ease: EASE }}
             className="mt-5 text-5xl leading-[1.05] tracking-tight sm:text-7xl"
           >
-            I break software
+            I build AI that
             <br />
-            <em className="font-display italic text-pass">for a living.</em>
+            <em className="font-display italic text-pass">ships to production.</em>
           </motion.h1>
 
           <motion.p
@@ -39,9 +39,9 @@ export default function Hero() {
             transition={{ duration: 0.56, delay: 0.22, ease: EASE }}
             className="mt-6 max-w-lg text-lg leading-relaxed text-muted"
           >
-            Senior QA Automation Architect. Twenty years in software, the last eight building the
-            test frameworks that catch failures before your users do. Playwright, Cypress,
-            TypeScript, and lately, AI that writes tests with me.
+            AI Solutions Engineer. Twenty years in software, the last eight building the test
+            frameworks that catch what breaks before your users do. Now I build the AI agents,
+            automations, and production systems that replace manual work entirely.
           </motion.p>
 
           <motion.div

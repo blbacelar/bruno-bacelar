@@ -12,7 +12,7 @@ const SPECS: Spec[] = [
   { text: "renders hero without layout shift", ms: 23 },
   { text: "experience exceeds 20 years", ms: 4 },
   { text: "playwright and cypress expertise verified", ms: 112 },
-  { text: "rebuilds frameworks other people gave up on", ms: 317 },
+  { text: "ships AI agents that catch their own mistakes", ms: 317 },
   { text: "ships CI pipelines developers actually trust", ms: 88 },
   { text: "fluent in English and Portuguese", ms: 12 },
   { text: "available for new engagements", ms: 1 },

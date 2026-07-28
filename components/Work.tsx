@@ -45,7 +45,7 @@ const CASES: Case[] = [
   },
   {
     client: "QA Pilot",
-    role: "Founder project",
+    role: "AI agent, self-directed",
     title: "AI that writes the test cases nobody has time for",
     body: "A test case generator that reads your Jira tickets, Azure DevOps work items and GitHub pull requests, then drafts structured test cases on the Claude API. Built because every team I have joined had the same backlog of untested acceptance criteria.",
     tags: ["Claude API", "Next.js", "TypeScript"],
@@ -57,11 +57,24 @@ const CASES: Case[] = [
     ],
   },
   {
+    client: "Diário de Bordo",
+    role: "Independent project",
+    title: "AI cost estimates you can actually trust",
+    body: "A live app that helps families plan a move to Canada. The financial estimate feature blends AI-generated market pricing with deterministic, hand-coded government fee logic, so the numbers that matter most are never left to a model's guess. Real users, live today.",
+    tags: ["Claude API", "Supabase", "Next.js"],
+    status: "passed",
+    trace: [
+      ["design", 30, "bg-trace"],
+      ["build", 40, "bg-flaky"],
+      ["ship", 30, "bg-pass"],
+    ],
+  },
+  {
     client: "Olea Connects",
-    role: "CTO, Olive Social Impact",
+    role: "Independent project",
     title: "A membership platform for Canadian nonprofits",
-    body: "As co-founder and CTO I lead the full technical build: Next.js 14, Supabase, auth, payments and member management. A two-person company shipping a real product for organizations that cannot afford enterprise software.",
-    tags: ["Next.js 14", "Supabase", "Product leadership"],
+    body: "Full technical build for a nonprofit governance platform: Next.js, Supabase, auth, payments, and member management. Integrations to Attio and QuickBooks run on versioned outbox workers, so a failed sync retries safely instead of quietly losing data. Launching mid-August.",
+    tags: ["Next.js", "Supabase", "Integrations"],
     status: "running",
     trace: [
       ["mvp", 38, "bg-trace"],
@@ -98,7 +111,7 @@ export default function Work() {
           <em className="font-display italic text-pass">not adjectives.</em>
         </h2>
         <p className="mt-4 max-w-xl text-muted">
-          Four engagements. Hover a card to see its trace: how each project moved from audit to
+          Five engagements. Hover a card to see its trace: how each project moved from audit to
           green.
         </p>
       </Reveal>

@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bruno Bacelar · I break software for a living",
+  title: "Bruno Bacelar · I ship AI that survives production",
   description:
-    "Senior QA Automation Architect. 20+ years in software, 8 building test frameworks that catch what everyone else ships. Playwright, Cypress, TypeScript, AI-assisted QA.",
+    "AI Solutions Engineer. 20+ years in software, 8 building the test frameworks that catch what everyone else ships, now building the AI agents and automations that replace it. Claude, n8n, TypeScript, Supabase.",
   metadataBase: new URL("https://bruno-bacelar.vercel.app"),
   openGraph: {
-    title: "Bruno Bacelar · QA Automation Architect",
+    title: "Bruno Bacelar · AI Solutions Engineer",
     description:
-      "The portfolio that tests itself. Playwright, Cypress, TypeScript, AI-assisted QA.",
+      "The portfolio that tests itself. AI agents, automation, and production systems that hold up.",
     type: "website",
   },
 };

@@ -25,9 +25,9 @@ const SUITES = [
     note: "Pipelines with quality gates, not decoration",
   },
   {
-    suite: "AI in QA",
-    tools: "Claude API · test generation · agentic workflows",
-    note: "The part of the stack that did not exist 3 years ago",
+    suite: "AI agents & automation",
+    tools: "Claude API · OpenRouter · n8n · MCP-style connectors",
+    note: "Agents that read, decide, and act, with a human checking the risky parts",
   },
   {
     suite: "Mobile",

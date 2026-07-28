@@ -18,12 +18,14 @@ export function About() {
             <p>
               I wrote my first line of production code in Brazil more than two decades ago. Since
               then I have been a developer, a consultant, and for the last eight years the person
-              teams call when their test suite is flaky, slow, or missing entirely.
+              teams call when their test suite is flaky, slow, or missing entirely. These days I
+              spend most of that instinct on AI agents and automation instead, catching what an
+              agent gets wrong before it ships, not just what a human gets wrong.
             </p>
             <p>
               I am based in Canada, work in English and Portuguese, and I am at my best in the gap
-              between engineering and quality: building frameworks developers want to use, not
-              frameworks they route around.
+              between building fast and building something that still works in a year: real
+              testing, real reliability, not a demo that happens to work once.
             </p>
             <p>
               Outside of work I write psychological thrillers under a pen name. It turns out that
@@ -51,8 +53,8 @@ export function Contact() {
             That means there is something worth fixing.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-muted">
-            I take on QA architecture engagements, SDET contract work and advisory on bringing AI
-            into testing workflows. English or Portuguese, remote-first.
+            I take on AI agent and automation engineering, integration work, and advisory on
+            bringing AI into real production workflows. English or Portuguese, remote-first.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
